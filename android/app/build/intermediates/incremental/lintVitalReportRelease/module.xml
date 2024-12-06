@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/muhammadali/Desktop/weather_api_app/android/app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    agpVersion="8.1.0"
+    buildFolder="build"
+    bootClassPath="/Users/muhammadali/Library/Android/sdk/platforms/android-35/android.jar:/Users/muhammadali/Library/Android/sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

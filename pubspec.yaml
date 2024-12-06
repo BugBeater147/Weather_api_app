@@ -1,0 +1,56 @@
+name: weather_api_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.16.0
+  firebase_messaging: ^14.6.4
+  cloud_firestore: ^4.11.1
+  http: ^1.2.1
+  provider: ^6.1.2
+  geolocator: ^9.0.2
+  google_maps_flutter: ^2.2.2
+  flutter_map: ^5.0.0
+  flutter_local_notifications: ^18.0.1
+  shared_preferences: ^2.1.1
+  intl: ^0.18.0
+  image_picker: ^0.8.8+7
+  flutter_svg: ^2.0.7
+  carousel_slider: ^5.0.0
+  path_provider: ^2.1.2
+  screenshot: ^1.3.0
+  dio: ^5.1.2
+  cupertino_icons: ^1.0.8
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^2.2.19
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+
+flutter_native_splash:
+  color: "#ffffff"  # Background color for the splash screen
+  image: assets/Splash.png  # Path to the splash screen image
+  android: true  # Enable splash screen for Android
+  ios: true  # Enable splash screen for iOS
+  web: true  # Enable splash screen for Web
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/Splash.png
+    - assets/Sunny.png
+    - assets/Cloudy.png
+    - assets/Rainy.png
+    - assets/Snowy.png
+    - assets/Lightning.png

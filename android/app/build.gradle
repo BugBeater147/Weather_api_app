@@ -1,0 +1,62 @@
+// android/app/build.gradle
+plugins {
+    id "com.android.application"
+    id "com.google.gms.google-services" // Required for Firebase
+    id "kotlin-android"                 // Kotlin support
+    id "dev.flutter.flutter-gradle-plugin" // Flutter plugin
+}
+
+android {
+    namespace "com.example.weather_api_app" // Ensure this matches your package name
+    compileSdk = 35                         // Latest compile SDK version
+
+    defaultConfig {
+        applicationId "com.example.weather_api_app" // Your app package name
+        minSdk = 21                                 // Minimum supported SDK
+        targetSdk = 35                              // Latest target SDK
+        versionCode 1
+        versionName "1.0"
+
+        // Handle multidex for apps with many dependencies
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // Signing configuration for release builds
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+flutter {
+    source "../.."
+}
+
+dependencies {
+    // AndroidX Core KTX
+    implementation "androidx.core:core-ktx:1.12.0"
+
+    // Firebase Platform BOM (manages versions for Firebase dependencies)
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')
+
+    // Firebase Services
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-messaging-ktx"
+
+    // Support Libraries
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+}
